@@ -1,0 +1,82 @@
+// USER VARIABLES SECTION
+
+$clwhite: #fff;
+$clgrey: #666;
+$clred: #f00;
+$clgreen: #008000;
+$accent: #ffa500; // Accent Color
+$fontsize: 16px; // Body Font Size
+$textcolor: #333; // Text Color
+$lineheight: 1.65; // Document Line Height
+$userfont: Roboto, sans-serif; // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px;
+$gutter: $grid-gutter-width;
+
+// IMPORT SECTION
+
+@import "../node_modules/bootstrap/scss/bootstrap-reboot"; // Bootstrap Reboot collection
+@import "../node_modules/bootstrap/scss/mixins/breakpoints"; // Bootstrap Breakpoints mixin
+@import "../node_modules/bootstrap/scss/bootstrap-grid"; // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'; // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face {
+    font-family: $fname;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    src: local($fname), url($furl) format("woff2");
+  }
+}
+// font-display: swap // Uncomment to initially display system fonts
+
+@include font(
+  "Roboto",
+  normal,
+  400,
+  "../fonts/montserratalternates-regular-webfont.woff2"
+);
+@include font(
+  "Roboto",
+  normal,
+  700,
+  "../fonts/montserratalternates-bold-webfont.woff2"
+);
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder {
+  color: $clgrey;
+}
+
+::selection {
+  background-color: $accent;
+  color: $white;
+}
+
+input,
+textarea {
+  outline: none;
+
+  &:focus:required:invalid {
+    border-color: $clred;
+  }
+
+  &:required:valid {
+    border-color: $clgreen;
+  }
+}
+
+body {
+  color: $textcolor;
+  font-family: $userfont;
+  font-size: $fontsize;
+  line-height: $lineheight;
+  min-width: 320px;
+  overflow-x: hidden;
+  position: relative;
+}
