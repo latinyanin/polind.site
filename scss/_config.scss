@@ -1,14 +1,16 @@
 // USER VARIABLES SECTION
 
-$clwhite: #fff;
-$clgrey: #666;
-$clred: #f00;
-$clgreen: #008000;
+$ccinnabar: #ed694f;
+$cyellow: #ffc74a;
+$cdark: #090c0b;
+$cgrey: #bdc8d9;
+$cred: #f00;
+$cgreen: #008000;
 $accent: #ffa500; // Accent Color
-$fontsize: 16px; // Body Font Size
+$fontsize: 14; // Body Font Size
 $textcolor: #333; // Text Color
-$lineheight: 1.65; // Document Line Height
-$userfont: Roboto, sans-serif; // User Font Family
+$lineheight: 2.15; // Document Line Height
+$userfont: Montserrat, sans-serif; // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
 
 // Bootstrap compatible gutter variable => $gutter
@@ -21,6 +23,10 @@ $gutter: $grid-gutter-width;
 @import "../node_modules/bootstrap/scss/mixins/breakpoints"; // Bootstrap Breakpoints mixin
 @import "../node_modules/bootstrap/scss/bootstrap-grid"; // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'; // Optional Bootstrap Utilites
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/button-group"; // Nav
+@import "../node_modules/bootstrap/scss/navbar"; // Navbar
+@import "../node_modules/bootstrap/scss/utilities/screenreaders";
 
 // FONTS LOAD SECTION
 
@@ -32,25 +38,32 @@ $gutter: $grid-gutter-width;
     src: local($fname), url($furl) format("woff2");
   }
 }
+// Width conteiner 1440px
+
+.container-xxl {
+  margin: auto;
+  max-width: 1440px;
+}
+
 // font-display: swap // Uncomment to initially display system fonts
 
 @include font(
-  "Roboto",
+  "Montserrat",
   normal,
   400,
-  "../fonts/montserratalternates-regular-webfont.woff2"
+  "../fonts/montserrat-regular-webfont.woff2"
 );
 @include font(
-  "Roboto",
+  "Montserrat",
   normal,
   700,
-  "../fonts/montserratalternates-bold-webfont.woff2"
+  "../fonts/montserrat-bold-webfont.woff2"
 );
 
 // GENERAL DOCUMENT STYLES
 
 ::placeholder {
-  color: $clgrey;
+  color: $cgrey;
 }
 
 ::selection {
@@ -63,15 +76,16 @@ textarea {
   outline: none;
 
   &:focus:required:invalid {
-    border-color: $clred;
+    border-color: $cred;
   }
 
   &:required:valid {
-    border-color: $clgreen;
+    border-color: $cgreen;
   }
 }
 
 body {
+  background-color: $gray-800;
   color: $textcolor;
   font-family: $userfont;
   font-size: $fontsize;
