@@ -1,9 +1,9 @@
 .wrap-nav {
-  height: 100px;
-  left: 0;
-  margin: 10px 0 0;
   position: absolute;
   top: 0;
+  left: 0;
+  height: 100px;
+  margin: 10px 0 0;
 
   a {
     color: $white;
@@ -50,34 +50,32 @@
     font: {
       size: 14px;
       weight: 700;
-
     }
 
     &::after {
-      background-color: $white;
-      content: "";
       display: block;
+      width: 100%;
       height: 1px;
       margin: 0 0 0 5px;
+      content: "";
+      background-color: $white;
+      transition: transform 0.15s;
       transform: scale(0, 1);
-      transition: transform .15s;
-      width: 100%;
     }
 
     &:hover {
-      color: $cyellow;
-    }
+      color: $yellow;
 
-    &:hover::after {
-      background-color: $cyellow;
-      transform: scale(1, 1);
+      &::after {
+        background-color: $yellow;
+        transform: scale(1, 1);
+      }
     }
+  }
+  .active {
+    color: $ccinnabar;
 
-    &.active {
-      color: $ccinnabar;
-    }
-
-    &.active::after {
+    &::after {
       display: none;
     }
   }

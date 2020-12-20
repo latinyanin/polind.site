@@ -1,0 +1,38 @@
+// Variables Bootstrap 4
+
+$fontsize: 16px; // Body Font Size
+$textcolor: #333; // Text Color
+$lineheight: 1.65;
+$fstyle: normal !default;
+$ccinnabar: #ed694f;
+$yellow: #ffc74a; //BT4
+
+$cdark: #090c0b;
+$cgrey: #bdc8d9;
+$cred: #f00;
+$cgreen: #008000;
+$accent: #ffa500; // Accent Color
+$fontsize: 16px; // Body Font Size
+$textcolor: #333; // Text Color
+$lineheight: 1.95; // Document Line Height
+$userfont: montserrat, sans-serif; // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px;
+$gutter: $grid-gutter-width;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1500px,
+); //BT4
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1440px,
+);
