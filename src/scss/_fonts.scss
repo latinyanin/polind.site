@@ -1,3 +1,4 @@
-//font-face("font-family", "name_file", "font_style(option)", font_weight);
-@include font-face("montserrat", "montserrat-bold-webfont", "", 700);
-@include font-face("montserrat", "montserrat-regular-webfont", "", 400);
+//font-face("font-family", "name_file_url", "font_style(option)", font_weight);
+
+@include font-face("montserrat", "montserrat-regular-webfont", "normal", 400);
+@include font-face("montserrat", "montserrat-bold-webfont", "normal", 700);

@@ -98,7 +98,7 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     contentBase: path.resolve(__dirname, 'docs'),
-    open: 'google-chrome', //  For example, 'google-chrome' or 'firefox' on Linux 'chrome' on Windows.
+    open: 'chromium', //  For example, 'google-chrome' or 'firefox' on Linux 'chrome' on Windows.
     compress: true,
     hot: true,
     port: 3000,
