@@ -3763,6 +3763,8 @@ body {
   .wrap-nav a {
     color: #fff;
     text-decoration: none; }
+  .wrap-nav .navbar-toggler {
+    margin-top: 25px; }
 
 .navbar-brand {
   padding: 27px 0 0 13px; }
@@ -3791,7 +3793,6 @@ body {
       display: block;
       width: 100%;
       height: 1px;
-      margin: 0 0 0 5px;
       content: "";
       background-color: #fff;
       transition: transform 0.15s;
@@ -3809,17 +3810,64 @@ body {
 .navbar-search {
   width: 12px;
   height: 12px;
-  margin: 29px 14px 0;
+  margin: 16px auto 0;
   background: url(.././img/nav_search_lens.svg) no-repeat; }
 
 @media (max-width: 767.98px) {
-  .navigation-inner a::after {
-    display: none; } }
+  .navigation-inner {
+    padding-bottom: 30px;
+    background-color: #000;
+    border-radius: 0 0 50px 50px;
+    opacity: 0.9; }
+    .navigation-inner a::after {
+      display: none; } }
 
 .header {
   height: 900px;
   background: #343a40 url(.././img/bghead.jpg) no-repeat center center;
   background-size: cover; }
+
+.wrap-tagline {
+  width: 40%;
+  padding-top: 16em;
+  margin: 0 auto; }
+  .wrap-tagline .tagline-head {
+    text-align: center; }
+    .wrap-tagline .tagline-head > strong {
+      font-size: calc(24px + 32 * (100vw / 1450));
+      line-height: 1.05;
+      color: #fff; }
+    .wrap-tagline .tagline-head span {
+      color: #ed694f; }
+  .wrap-tagline .tagline-desc {
+    font-size: 0.85em;
+    line-height: 1;
+    color: #fff;
+    text-align: center; }
+  .wrap-tagline .head-search {
+    padding: 20px 0 0;
+    text-align: center; }
+    .wrap-tagline .head-search .head-searh-button {
+      width: 17em;
+      height: 3.5em;
+      font-size: 0.65rem;
+      font-weight: 700;
+      line-height: 3.7;
+      color: #b98000;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background-color: #ffc74a;
+      border: 0;
+      border-radius: 20px; }
+
+@media (max-width: 767.98px) {
+  .wrap-tagline {
+    width: 80%;
+    padding-top: 10rem; }
+    .wrap-tagline .tagline-head {
+      text-align: center; }
+      .wrap-tagline .tagline-head > strong {
+        font-size: 35px; } }
 
 
 /*# sourceMappingURL=main.css.map*/
