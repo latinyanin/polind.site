@@ -1,58 +1,70 @@
 .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 900px;
   background: $gray-800 url("../img/bg/bghead.jpg") no-repeat center center;
   background-size: cover;
-}
-.wrap-tagline {
-  width: 40%;
-  padding-top: 16em;
-  margin: 0 auto;
 
-  .tagline-head {
-    text-align: center;
-    > strong {
-      font-size: calc(24px + 32 * (100vw / 1450)); //65px;
-      line-height: 1.05;
-      color: $white;
-    }
-    span {
-      color: $ccinnabar;
-    }
-  }
-  .tagline-desc {
-    font-size: 0.85em;
-    line-height: 1;
-    color: $white;
-    text-align: center;
-  }
-  .head-search {
-    padding: 20px 0 0;
-    text-align: center;
-
-    .head-searh-button {
-      width: 17em;
-      height: 3.5em;
-      font-size: 0.65rem;
-      font-weight: 700;
-      line-height: 3.7;
-      color: $accent;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      background-color: $yellow;
-      border: 0;
-      border-radius: 20px;
-    }
-  }
-}
-@media (max-width: 767.98px) {
   .wrap-tagline {
-    width: 80%;
-    padding-top: 10rem;
+    width: 50%;
+    padding: 0 0 160px;
+    margin: 0 auto;
+
     .tagline-head {
       text-align: center;
+
       > strong {
-        font-size: 35px;
+        font-size: calc(24px + 52 * (100vw / 1440) * 0.77); //65px;
+        line-height: 1.05;
+        color: $white;
+      }
+      span {
+        color: $ccinnabar;
       }
     }
+    .tagline-desc {
+      font-size: 0.85em;
+      line-height: 1;
+      color: $white;
+      text-align: center;
+    }
+    .head-search {
+      padding: 20px 0 0;
+      text-align: center;
+
+      .head-search-btn {
+        width: 17em;
+        height: 3.5em;
+        font-size: 0.65rem;
+        font-weight: 700;
+        line-height: 3.7em;
+        color: $accent;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        vertical-align: middle;
+        background-color: $yellow;
+        border: 0;
+        border-radius: 20px;
+      }
+    }
+  }
+  @media (max-width: 767.98px) {
+    .wrap-tagline {
+      width: 80%;
+      padding-top: 10rem;
+      .tagline-head {
+        text-align: center;
+        > strong {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+  // -------------------- Header end -----------------
+}
+@media (max-width: 767.98px) {
+  .header {
+    height: 450px;
   }
 }
